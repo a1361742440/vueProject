@@ -51,7 +51,6 @@ export default {
         const { data: result } = await this.$http.post("login", this.LoginForm);
         if (result.meta.status !== 200) return this.$message.error("登录失败");
         this.$message.success("登录成功");
-        console.log(result);
         window.sessionStorage.setItem("token", result.data.token);
         this.$router.push("/home");
       });
