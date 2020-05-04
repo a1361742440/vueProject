@@ -96,6 +96,9 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.home-container {
+  height: 100%;
+}
 .el-header {
   background-color: #373d41;
   display: flex;

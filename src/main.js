@@ -5,6 +5,9 @@ import './plugins/element.js'
 import axios from "axios"
 import './assets/fonts/iconfont.css'
 import './assets/css/global.css'
+import TreeTable from 'vue-table-with-tree-grid'
+
+Vue.component('tree-table', TreeTable)
 
 Vue.prototype.$http = axios;
 
@@ -15,7 +18,7 @@ axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
-
+ 
 new Vue({
   router,
   render: h => h(App)
